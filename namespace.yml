@@ -1,0 +1,9 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  #create a namespace to separate the app from default namespace
+  name: wordpress
+status:
+  #phase just means this is an active namespace, either active or terminating
+  phase: Active

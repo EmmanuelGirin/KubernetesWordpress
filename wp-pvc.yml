@@ -1,0 +1,17 @@
+---
+#pvc for wordpress
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: wp-pv-claim
+  namespace: wordpress
+  labels:
+    app: wordpress
+    tier: frontend
+spec:
+  storageClassName: manual-config
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 20Gi

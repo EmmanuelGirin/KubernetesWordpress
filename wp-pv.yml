@@ -1,0 +1,18 @@
+---
+#make the storage volume for wordpress files
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: wp-pv
+  namespace: wordpress
+  labels:
+    app: wordpress
+    tier: frontend
+spec:
+  storageClassName: manual-config
+  capacity:
+    storage: 20Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/wp-data"

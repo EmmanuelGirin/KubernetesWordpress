@@ -1,0 +1,20 @@
+---
+secretGenerator:
+- name: mysql-config
+  literals:
+  - db-name=wp
+  - user=wp_owner
+  - password=testpass3142
+  - randompassword=randomrootpass
+
+resources:
+- namespace.yml
+- mysql-deployment.yml
+- mysql-pvc.yml
+- mysql-pv.yml
+- mysql-clusterip.yml
+- wordpress-deployment.yml
+- wp-pvc.yml
+- wp-pv.yml
+- wp-nodeport.yml
+
