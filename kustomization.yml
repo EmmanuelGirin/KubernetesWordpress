@@ -2,8 +2,8 @@
 secretGenerator:
 - name: mysql-config
   literals:
-  - db-name=wp
-  - user=wp_owner
+  - db-name=wordpress
+  - user=owner
   - password=testpass3142
   - randompassword=randomrootpass
 
