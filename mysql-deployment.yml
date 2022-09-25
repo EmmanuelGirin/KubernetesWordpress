@@ -34,7 +34,7 @@ spec:
             secretKeyRef:
               name: mysql-config
               key: user
-        - name: MYSQL_ROOT_PASSWORD
+        - name: MYSQL_PASSWORD
           valueFrom:
             secretKeyRef:
               name: mysql-config
