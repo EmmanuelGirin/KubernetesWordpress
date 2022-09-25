@@ -1,0 +1,20 @@
+---
+#Deploy wordpress nodeport service for frontend
+apiVersion: v1
+kind: Service
+metadata:
+  name: wordpress
+  namespace: wordpress
+  labels:
+    app: wordpress
+    tier: frontend
+spec:
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 30008
+  selector:
+    app: wordpress
+    tier: frontend
