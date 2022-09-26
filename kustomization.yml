@@ -1,11 +1,12 @@
 ---
 secretGenerator:
 - name: mysql-config
+  namespace: wordpress
   literals:
-  - db-name=wp
-  - user=wp_owner
-  - password=testpass3142
-  - randompassword=randomrootpass
+  - dbname=wordpress
+  - user=test
+  - password=testpass
+  - rootpass=randomrootpass
 
 resources:
 - namespace.yml
